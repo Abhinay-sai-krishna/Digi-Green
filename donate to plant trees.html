@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Trees - Digi Green</title>
+    <link rel="stylesheet" href="donate to plant trees.css">
+</head>
+<body>
+    <div class="bg-animation" id="particles"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                🌍 Digi Green
+            </div>
+            <ul class="nav-links">
+                <li><a href="Home page.html">Home</a></li>
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="donate to plant trees.html" class="active">Plant Trees</a></li>
+                <li><a href="Community..html">Community</a></li>
+                <li><a href="#challenges">Challenges</a></li>
+            </ul>
+            <div class="user-profile">
+                <div class="user-avatar">US</div>
+                <span>User</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>🌳 Plant Trees & Restore Our Planet</h1>
+            <p>Join our mission to combat deforestation and climate change. Every tree planted makes a difference in creating a greener, healthier world for future generations.</p>
+        </div>
+
+        <div class="impact-stats">
+            <div class="impact-card">
+                <div class="impact-icon">🌳</div>
+                <div class="impact-number">15,847</div>
+                <div class="impact-label">Trees Planted</div>
+            </div>
+            <div class="impact-card">
+                <div class="impact-icon">🌍</div>
+                <div class="impact-number">2,456</div>
+                <div class="impact-label">Hectares Restored</div>
+            </div>
+            <div class="impact-card">
+                <div class="impact-icon">💨</div>
+                <div class="impact-number">89.2</div>
+                <div class="impact-label">Tons CO₂ Absorbed</div>
+            </div>
+            <div class="impact-card">
+                <div class="impact-icon">🐦</div>
+                <div class="impact-number">1,234</div>
+                <div class="impact-label">Wildlife Habitats</div>
+            </div>
+        </div>
+
+        <div class="donation-section">
+            <div class="donation-form">
+                <h2 class="form-title">🌱 Choose Your Impact</h2>
+                
+                <div class="donation-options">
+                    <div class="donation-option" data-trees="1" data-price="25">
+                        <div class="option-trees">1 Tree</div>
+                        <div class="option-price">₹25</div>
+                        <div class="option-impact">Absorbs 22kg CO₂/year</div>
+                    </div>
+                    <div class="donation-option" data-trees="5" data-price="100">
+                        <div class="option-trees">5 Trees</div>
+                        <div class="option-price">₹100</div>
+                        <div class="option-impact">Absorbs 110kg CO₂/year</div>
+                    </div>
+                    <div class="donation-option selected" data-trees="10" data-price="200">
+                        <div class="option-trees">10 Trees</div>
+                        <div class="option-price">₹200</div>
+                        <div class="option-impact">Absorbs 220kg CO₂/year</div>
+                    </div>
+                    <div class="donation-option" data-trees="25" data-price="450">
+                        <div class="option-trees">25 Trees</div>
+                        <div class="option-price">₹450</div>
+                        <div class="option-impact">Absorbs 550kg CO₂/year</div>
+                    </div>
+                </div>
+
+                <div class="custom-amount">
+                    <label class="form-label">Or enter custom amount:</label>
+                    <input type="number" class="form-input" placeholder="Enter amount (₹)" id="customAmount">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Your Name</label>
+                    <input type="text" class="form-input" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-input" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Plant in Memory of (Optional)</label>
+                    <input type="text" class="form-input" placeholder="Dedicate these trees to someone special">
+                </div>
+
+                <button class="donate-btn" onclick="processDonation()">
+                    🌳 Plant Trees Now
+                </button>
+            </div>
+
+            <div class="tree-visualization">
+                <h2 class="visualization-title">Your Tree Impact</h2>
+                <div class="tree-counter" id="treeCounter">10</div>
+                <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 2rem;">Trees to be planted</p>
+                
+                <div class="tree-grid" id="treeGrid">
+                    <!-- Trees will be populated by JavaScript -->
+                </div>
+
+                <div class="impact-description">
+                    <strong>Your Impact:</strong> These trees will absorb <span id="co2Impact">220kg</span> of CO₂ annually, provide habitat for wildlife, prevent soil erosion, and contribute to cleaner air and water.
+                </div>
+
+                <div class="environmental-benefits">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">💨</div>
+                        <div class="benefit-title">Clean Air</div>
+                        <div class="benefit-desc">Absorbs CO₂ and releases oxygen</div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🏠</div>
+                        <div class="benefit-title">Wildlife Habitat</div>
+                        <div class="benefit-desc">Provides homes for animals</div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🌊</div>
+                        <div class="benefit-title">Water Cycle</div>
+                        <div class="benefit-desc">Helps regulate water flow</div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🌡️</div>
+                        <div class="benefit-title">Climate Control</div>
+                        <div class="benefit-desc">Reduces temperature naturally</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="recent-plantings">
+            <h2 class="section-title">Recent Tree Plantings</h2>
+            <div class="plantings-grid">
+                <div class="planting-item">
+                    <div class="planting-user">Priya Sharma</div>
+                    <div class="planting-details">Planted 15 trees in Telangana Forest Reserve</div>
+                    <div class="planting-time">2 hours ago</div>
+                </div>
+                <div class="planting-item">
+                    <div class="planting-user">Rajesh Kumar</div>
+                    <div class="planting-details">Planted 5 trees in memory of his grandmother</div>
+                    <div class="planting-time">5 hours ago</div>
+                </div>
+                <div class="planting-item">
+                    <div class="planting-user">Green School Initiative</div>
+                    <div class="planting-details">Planted 50 trees for Earth Day celebration</div>
+                    <div class="planting-time">1 day ago</div>
+                </div>
+                <div class="planting-item">
+                    <div class="planting-user">TechCorp Pvt Ltd</div>
+                    <div class="planting-details">Corporate donation - 100 trees planted</div>
+                    <div class="planting-time">2 days ago</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Initialize tree grid
+        function initializeTreeGrid(numTrees = 10) {
+            const treeGrid = document.getElementById('treeGrid');
+            treeGrid.innerHTML = '';
+            
+            for (let i = 0; i < 50; i++) {
+                const treeIcon = document.createElement('div');
+                treeIcon.className = 'tree-icon';
+                treeIcon.textContent = '🌳';
+                
+                if (i < numTrees) {
+                    treeIcon.classList.add('planted');
+                }
+                
+                treeGrid.appendChild(treeIcon);
+            }
+        }
+
+        // Update tree visualization
+        function updateTreeVisualization(trees, price) {
+            const treeCounter = document.getElementById('treeCounter');
+            const co2Impact = document.getElementById('co2Impact');
+            
+            treeCounter.textContent = trees;
+            co2Impact.textContent = (trees * 22) + 'kg';
+            
+            initializeTreeGrid(trees);
+        }
+
+        // Handle donation option selection
+        document.querySelectorAll('.donation-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.donation-option').forEach(o => o.classList.remove('selected'));
+                this.classList.add('selected');
+                
+                const trees = parseInt(this.dataset.trees);
+                const price = parseInt(this.dataset.price);
+                
+                updateTreeVisualization(trees, price);
+                
+                // Clear custom amount
+                document.getElementById('customAmount').value = '';
+            });
+        });
+
+        // Handle custom amount input
+        document.getElementById('customAmount').addEventListener('input', function() {
+            const customAmount = parseInt(this.value) || 0;
+            const trees = Math.floor(customAmount / 25);
+            
+            if (customAmount > 0) {
+                document.querySelectorAll('.donation-option').forEach(o => o.classList.remove('selected'));
+                updateTreeVisualization(trees, customAmount);
+            }
+        });
+
+        // Process donation
+        function processDonation() {
+            const name = document.querySelector('input[placeholder="Enter your name"]').value;
+            const email = document.querySelector('input[placeholder="Enter your email"]').value;
+            
+            if (!name || !email) {
+                alert('Please fill in your name and email address.');
+                return;
+            }
+            
+            // Show success message
+            alert('Thank you for your donation! Your trees will be planted within 7 days. You will receive updates via email.');
+            
+            // In a real application, this would process the payment and create the donation record
+            console.log('Processing donation...');
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            initializeTreeGrid(10);
+        });
+    </script>
+</body>
+</html>

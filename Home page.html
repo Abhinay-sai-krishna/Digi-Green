@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco360 - Your Digital Hub to Protect the Planet</title>
+    <link rel="stylesheet" href="Home page .css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                Digi Green
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="login.html">Dashboard</a></li>
+                <li><a href="login.html">Community</a></li>
+                <li><a href="#challenges">Challenges</a></li>
+               
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-secondary">Login</a>
+                <a href="login.html" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="floating-elements">
+            <div class="floating-element">🌿</div>
+            <div class="floating-element">♻️</div>
+            <div class="floating-element">🌳</div>
+            <div class="floating-element">💧</div>
+        </div>
+        <div class="hero-content">
+            <h1>Your Digital Hub to Protect the Planet</h1>
+            <p>Join now in Digi Green for fighting plastic pollution, e-waste, deforestation, water scarcity, and climate change. Together, we can create a sustainable future.</p>
+            <a href="login.html" class="hero-cta">Start Your Green Journey</a>
+        </div>
+    </section>
+
+    <section class="topics">
+        <div class="container">
+            <div class="section-header">
+                <h2>Take Action on Environmental Issues</h2>
+                <p>Choose an area where you want to make a difference and start your sustainability journey today.</p>
+            </div>
+            
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <span class="topic-icon">♻️</span>
+                    <h3>Plastic Pollution</h3>
+                    <p>Plastic waste is choking our planet. Learn how to reduce your plastic footprint, find sustainable alternatives, and join the fight against single-use plastics.</p>
+                    <button class="topic-btn">Track Your Plastic Use</button>
+                </div>
+
+                <div class="topic-card">
+                    <span class="topic-icon">🔌</span>
+                    <h3>E-Waste Management</h3>
+                    <p>Electronic waste is the fastest-growing waste stream. Discover safe disposal options, join e-waste drives, and learn about circular economy principles.</p>
+                    <button class="topic-btn">Recycle Your E-Waste</button>
+                </div>
+
+                <div class="topic-card">
+                    <span class="topic-icon">🌳</span>
+                    <h3>Deforestation</h3>
+                    <p>Forests are the lungs of our planet. Help restore greenery by adopting trees, supporting reforestation efforts, and making sustainable choices.</p>
+                    <button class="topic-btn">Plant a Tree</button>
+                </div>
+
+                <div class="topic-card">
+                    <span class="topic-icon">💧</span>
+                    <h3>Water Conservation</h3>
+                    <p>Clean water is becoming increasingly scarce. Track your water usage, learn conservation techniques, and support water protection initiatives.</p>
+                    <button class="topic-btn">Save Water Now</button>
+                </div>
+
+                <div class="topic-card">
+                    <span class="topic-icon">🌍</span>
+                    <h3>Climate Action</h3>
+                    <p>Climate change threatens our future. Calculate your carbon footprint, discover renewable energy solutions, and join the global climate movement.</p>
+                    <button class="topic-btn">Reduce Your Carbon Footprint</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="impact">
+        <div class="container">
+            <h2>Our Collective Impact</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem; opacity: 0.9;">Together, we're making a real difference for our planet</p>
+            
+            <div class="impact-grid">
+                <div class="impact-stat">
+                    <div class="impact-number">1.2M</div>
+                    <div class="impact-label">kg Plastic Saved</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-number">8.5K</div>
+                    <div class="impact-label">Tons E-waste Recycled</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-number">250K</div>
+                    <div class="impact-label">Trees Planted</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-number">50M</div>
+                    <div class="impact-label">Litres Water Saved</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-number">125K</div>
+                    <div class="impact-label">Tons CO₂ Reduced</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Digi Green</h3>
+                <a href="#">Our Mission</a>
+                <a href="#">How It Works</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-section">
+                <h3>Get Involved</h3>
+                <a href="#">Join Community</a>
+                <a href="#">Start Challenge</a>
+                <a href="#">Partner With Us</a>
+                <a href="#">Volunteer</a>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <a href="#">Blog</a>
+                <a href="#">Research</a>
+
+                <a href="#">API Documentation</a>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Digi Green. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced click animations for topic buttons
+        document.querySelectorAll('.topic-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Create ripple effect
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+                
+                // Button animation
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
+
+        // Enhanced number animation with better timing
+        function animateNumbers() {
+            const numbers = document.querySelectorAll('.impact-number');
+            numbers.forEach((number, index) => {
+                const text = number.textContent;
+                const isMillions = text.includes('M');
+                const isThousands = text.includes('K');
+                let target = parseInt(text.replace(/[^\d]/g, ''));
+                
+                if (isMillions) target *= 1000000;
+                else if (isThousands) target *= 1000;
+                
+                let current = 0;
+                const increment = target / 100;
+                const duration = 2000; // 2 seconds
+                const stepTime = duration / 100;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    
+                    let displayValue;
+                    if (current >= 1000000) {
+                        displayValue = (current / 1000000).toFixed(1) + 'M';
+                    } else if (current >= 1000) {
+                        displayValue = (current / 1000).toFixed(1) + 'K';
+                    } else {
+                        displayValue = Math.floor(current).toLocaleString();
+                    }
+                    
+                    number.textContent = displayValue;
+                }, stepTime);
+            });
+        }
+
+        // Intersection Observer for impact section
+        const impactSection = document.querySelector('.impact');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateNumbers();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(impactSection);
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero');
+            const speed = scrolled * 0.5;
+            parallax.style.transform = `translateY(${speed}px)`;
+        });
+
+        // Add ripple CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            .ripple {
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.3);
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+                pointer-events: none;
+            }
+            
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

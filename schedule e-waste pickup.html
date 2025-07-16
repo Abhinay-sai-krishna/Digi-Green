@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule E-waste Pickup - Digi Green</title>
+    <link rel="stylesheet" href="schedule e-waste pickup.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                🌍 Digi Green
+            </div>
+            <ul class="nav-links">
+                <li><a href="Home page.html">Home</a></li>
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="Community..html">Community</a></li>
+                <li><a href="#">Challenges</a></li>
+            </ul>
+            <div class="user-profile">
+                <div class="user-avatar">US</div>
+                <span>User</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>🔌 Schedule E-waste Pickup</h1>
+            <p>Safely dispose of your electronic waste and contribute to a cleaner environment. Our certified partners will handle your e-waste responsibly.</p>
+        </div>
+
+        <div class="info-cards">
+            <div class="info-card">
+                <div class="icon">🚛</div>
+                <h3>Free Pickup</h3>
+                <p>We provide free doorstep pickup service for all your e-waste items. No hidden charges.</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">🛡️</div>
+                <h3>Secure Data Destruction</h3>
+                <p>All data on your devices is securely destroyed following industry standards.</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">♻️</div>
+                <h3>Certified Recycling</h3>
+                <p>Your e-waste is processed by certified recycling facilities following environmental guidelines.</p>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <form id="ewasteForm">
+                <div class="form-section">
+                    <h3>📋 Select Your E-waste Items</h3>
+                    <div class="item-selector">
+                        <div class="item-card" data-item="smartphone">
+                            <div class="icon">📱</div>
+                            <div class="name">Smartphones</div>
+                            <div class="desc">Old phones, tablets</div>
+                            <div class="quantity-input">
+                                <button type="button" onclick="changeQuantity('smartphone', -1)">-</button>
+                                <span id="smartphone-qty">0</span>
+                                <button type="button" onclick="changeQuantity('smartphone', 1)">+</button>
+                            </div>
+                        </div>
+                        <div class="item-card" data-item="laptop">
+                            <div class="icon">💻</div>
+                            <div class="name">Laptops</div>
+                            <div class="desc">Computers, laptops</div>
+                            <div class="quantity-input">
+                                <button type="button" onclick="changeQuantity('laptop', -1)">-</button>
+                                <span id="laptop-qty">0</span>
+                                <button type="button" onclick="changeQuantity('laptop', 1)">+</button>
+                            </div>
+                        </div>
+                        <div class="item-card" data-item="tv">
+                            <div class="icon">📺</div>
+                            <div class="name">TVs & Monitors</div>
+                            <div class="desc">LED, LCD, CRT TVs</div>
+                            <div class="quantity-input">
+                                <button type="button" onclick="changeQuantity('tv', -1)">-</button>
+                                <span id="tv-qty">0</span>
+                                <button type="button" onclick="changeQuantity('tv', 1)">+</button>
+                            </div>
+                        </div>
+                        <div class="item-card" data-item="appliances">
+                            <div class="icon">🔌</div>
+                            <div class="name">Small Appliances</div>
+                            <div class="desc">Mixers, irons, etc.</div>
+                            <div class="quantity-input">
+                                <button type="button" onclick="changeQuantity('appliances', -1)">-</button>
+                                <span id="appliances-qty">0</span>
+                                <button type="button" onclick="changeQuantity('appliances', 1)">+</button>
+                            </div>
+                        </div>
+                        <div class="item-card" data-item="batteries">
+                            <div class="icon">🔋</div>
+                            <div class="name">Batteries</div>
+                            <div class="desc">All types of batteries</div>
+                            <div class="quantity-input">
+                                <button type="button" onclick="changeQuantity('batteries', -1)">-</button>
+                                <span id="batteries-qty">0</span>
+                                <button type="button" onclick="changeQuantity('batteries', 1)">+</button>
+                            </div>
+                        </div>
+                        <div class="item-card" data-item="other">
+                            <div class="icon">📦</div>
+                            <div class="name">Other Items</div>
+                            <div class="desc">Cables, chargers, etc.</div>
+                            <div class="quantity-input">
+                                <button type="button" onclick="changeQuantity('other', -1)">-</button>
+                                <span id="other-qty">0</span>
+                                <button type="button" onclick="changeQuantity('other', 1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="selected-items" id="selectedItems" style="display: none;">
+                        <h4>Selected Items Summary:</h4>
+                        <div id="itemsList"></div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>📍 Pickup Details</h3>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Pickup Address</label>
+                        <textarea id="address" name="address" required placeholder="Enter your complete address with landmark"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>🗓️ Schedule Pickup</h3>
+                    <div class="form-group">
+                        <label for="pickupDate">Preferred Date</label>
+                        <input type="date" id="pickupDate" name="pickupDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pickupTime">Preferred Time Slot</label>
+                        <select id="pickupTime" name="pickupTime" required>
+                            <option value="">Select Time Slot</option>
+                            <option value="morning">Morning (9:00 AM - 12:00 PM)</option>
+                            <option value="afternoon">Afternoon (12:00 PM - 4:00 PM)</option>
+                            <option value="evening">Evening (4:00 PM - 7:00 PM)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="specialInstructions">Special Instructions (Optional)</label>
+                        <textarea id="specialInstructions" name="specialInstructions" placeholder="Any specific instructions for the pickup team"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Schedule Pickup</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const quantities = {
+            smartphone: 0,
+            laptop: 0,
+            tv: 0,
+            appliances: 0,
+            batteries: 0,
+            other: 0
+        };
+
+        function changeQuantity(item, change) {
+            quantities[item] = Math.max(0, quantities[item] + change);
+            document.getElementById(item + '-qty').textContent = quantities[item];
+            
+            const card = document.querySelector(`[data-item="${item}"]`);
+            if (quantities[item] > 0) {
+                card.classList.add('selected');
+            } else {
+                card.classList.remove('selected');
+            }
+            
+            updateSelectedItems();
+        }
+
+        function updateSelectedItems() {
+            const selectedItems = Object.entries(quantities).filter(([item, qty]) => qty > 0);
+            const container = document.getElementById('selectedItems');
+            const itemsList = document.getElementById('itemsList');
+            
+            if (selectedItems.length === 0) {
+                container.style.display = 'none';
+                return;
+            }
+            
+            container.style.display = 'block';
+            itemsList.innerHTML = '';
+            
+            selectedItems.forEach(([item, qty]) => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'selected-item';
+                itemDiv.innerHTML = `
+                    <span>${item.charAt(0).toUpperCase() + item.slice(1)}</span>
+                    <span>${qty} item${qty > 1 ? 's' : ''}</span>
+                `;
+                itemsList.appendChild(itemDiv);
+            });
+        }
+
+        // Set minimum date to today
+        document.getElementById('pickupDate').min = new Date().toISOString().split('T')[0];
+
+        document.getElementById('ewasteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const selectedItems = Object.entries(quantities).filter(([item, qty]) => qty > 0);
+            if (selectedItems.length === 0) {
+                alert('Please select at least one e-waste item for pickup.');
+                return;
+            }
+            
+            // Simulate form submission
+            alert('Pickup scheduled successfully! You will receive a confirmation email shortly.');
+            
+            // Reset form
+            this.reset();
+            Object.keys(quantities).forEach(item => {
+                quantities[item] = 0;
+                document.getElementById(item + '-qty').textContent = '0';
+                document.querySelector(`[data-item="${item}"]`).classList.remove('selected');
+            });
+            updateSelectedItems();
+        });
+    </script>
+</body>
+</html>

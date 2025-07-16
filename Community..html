@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digi Green Community - Connect & Share</title>
+  <link rel="stylesheet" href="community.css">
+</head>
+<body>
+    <div class="bg-animation" id="particles"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                🌍 Digi Green
+            </div>
+            <ul class="nav-links">
+                <li><a href="Home page.html">Home</a></li>
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="Community..html" class="active">Community</a></li>
+                <li><a href="#challenges">Challenges</a></li>
+            </ul>
+            <div class="user-profile">
+                <div class="user-avatar">US</div>
+                <span>User</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="community-header">
+            <h1>Digi Green Community</h1>
+            <p>Connect with fellow eco-warriors and share your green journey</p>
+        </div>
+
+        <div class="community-stats">
+            <div class="stat-card">
+                <div class="stat-number">1,247</div>
+                <div class="stat-label">Active Members</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">89</div>
+                <div class="stat-label">Online Now</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">3,456</div>
+                <div class="stat-label">Posts Today</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Active Challenges</div>
+            </div>
+        </div>
+
+        <div class="community-content">
+            <div class="feed-section">
+                <div class="post-composer">
+                    <textarea id="postText" placeholder="Share your eco-friendly tip, achievement, or question with the community..."></textarea>
+                    <div class="post-actions">
+                        <div class="post-options">
+                            <button class="post-option" title="Add Image">📷</button>
+                            <button class="post-option" title="Add Poll">📊</button>
+                            <button class="post-option" title="Add Location">📍</button>
+                            <button class="post-option" title="Add Challenge">🏆</button>
+                        </div>
+                        <button class="post-btn" id="postBtn">Share</button>
+                    </div>
+                </div>
+
+                <div class="posts-feed" id="postsFeed">
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="post-avatar">EG</div>
+                            <div class="post-info">
+                                <div class="post-author">EcoGuru</div>
+                                <div class="post-time">2 hours ago</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            🌱 Just completed my first week of the plastic-free challenge! Saved 2.3kg of plastic by switching to reusable bags and containers. Small changes, big impact! #PlasticFree #EcoChallenge
+                        </div>
+                        <div class="post-actions-bar">
+                            <button class="post-action liked">
+                                <span>❤️</span>
+                                <span>24</span>
+                            </button>
+                            <button class="post-action">
+                                <span>💬</span>
+                                <span>8</span>
+                            </button>
+                            <button class="post-action">
+                                <span>🔄</span>
+                                <span>3</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="post-avatar">GH</div>
+                            <div class="post-info">
+                                <div class="post-author">GreenHeart</div>
+                                <div class="post-time">4 hours ago</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            🌳 Amazing tree planting event in Central Park today! Our community planted 50 trees and cleaned up 200kg of waste. Thanks to everyone who participated! Next event: Beach cleanup this Saturday 🏖️
+                        </div>
+                        <div class="post-actions-bar">
+                            <button class="post-action">
+                                <span>❤️</span>
+                                <span>67</span>
+                            </button>
+                            <button class="post-action">
+                                <span>💬</span>
+                                <span>15</span>
+                            </button>
+                            <button class="post-action">
+                                <span>🔄</span>
+                                <span>12</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="post-avatar">NZ</div>
+                            <div class="post-info">
+                                <div class="post-author">NatureZen</div>
+                                <div class="post-time">6 hours ago</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            💡 Pro tip: Use cold water for washing clothes! It saves energy and your clothes last longer. I've reduced my laundry energy consumption by 40% this way. What's your favorite energy-saving tip?
+                        </div>
+                        <div class="post-actions-bar">
+                            <button class="post-action">
+                                <span>❤️</span>
+                                <span>31</span>
+                            </button>
+                            <button class="post-action">
+                                <span>💬</span>
+                                <span>22</span>
+                            </button>
+                            <button class="post-action">
+                                <span>🔄</span>
+                                <span>8</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="post-avatar">ES</div>
+                            <div class="post-info">
+                                <div class="post-author">EcoSavvy</div>
+                                <div class="post-time">8 hours ago</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            🔋 Finally set up my home solar panel system! Generated 15kWh today and reduced my carbon footprint by 12kg CO₂. The initial investment was worth it. Happy to answer any questions about going solar! ☀️
+                        </div>
+                        <div class="post-actions-bar">
+                            <button class="post-action">
+                                <span>❤️</span>
+                                <span>89</span>
+                            </button>
+                            <button class="post-action">
+                                <span>💬</span>
+                                <span>34</span>
+                            </button>
+                            <button class="post-action">
+                                <span>🔄</span>
+                                <span>18</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">🟢 Online Members</h3>
+                    <div class="online-users">
+                        <div class="online-user">
+                            <div class="online-avatar">
+                                EG
+                                <div class="online-indicator"></div>
+                            </div>
+                            <div class="online-name">EcoGuru</div>
+                        </div>
+                        <div class="online-user">
+                            <div class="online-avatar">
+                                GH
+                                <div class="online-indicator"></div>
+                            </div>
+                            <div class="online-name">GreenHeart</div>
+                        </div>
+                        <div class="online-user">
+                            <div class="online-avatar">
+                                NZ
+                                <div class="online-indicator"></div>
+                            </div>
+                            <div class="online-name">NatureZen</div>
+                        </div>
+                        <div class="online-user">
+                            <div class="online-avatar">
+                                ES
+                                <div class="online-indicator"></div>
+                            </div>
+                            <div class="online-name">EcoSavvy</div>
+                        </div>
+                        <div class="online-user">
+                            <div class="online-avatar">
+                                PT
+                                <div class="online-indicator"></div>
+                            </div>
+                            <div class="online-name">PlanetProtector</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">🏆 Eco Leaderboard</h3>
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">1</div>
+                        <div class="online-avatar">EG</div>
+                        <div class="leaderboard-info">
+                            <div class="leaderboard-name">EcoGuru</div>
+                            <div class="leaderboard-score">2,450 eco points</div>
+                        </div>
+                    </div>
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">2</div>
+                        <div class="online-avatar">GH</div>
+                        <div class="leaderboard-info">
+                            <div class="leaderboard-name">GreenHeart</div>
+                            <div class="leaderboard-score">2,180 eco points</div>
+                        </div>
+                    </div>
+                    <div class="leaderboard-item">
+                        <div class="leaderboard-rank">3</div>
+                        <div class="online-avatar">NZ</div>
+                        <div class="leaderboard-info">
+                            <div class="leaderboard-name">NatureZen</div>
+                            <div class="leaderboard-score">1,890 eco points</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">🚀 Active Challenges</h3>
+                    <div class="challenges-list">
+                        <div class="challenge-item">
+                            <div class="challenge-title">Plastic-Free Week</div>
+                            <div class="challenge-description">Avoid single-use plastics for 7 days</div>
+                            <button class="challenge-join">Join Challenge</button>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-title">Energy Saver</div>
+                            <div class="challenge-description">Reduce electricity usage by 20%</div>
+                            <button class="challenge-join">Join Challenge</button>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-title">Water Warrior</div>
+                            <div class="challenge-description">Save 100 liters of water daily</div>
+                            <button class="challenge-join">Join Challenge</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Create animated particles
+        function createParticles() {
+            const particleContainer = document.getElementById('particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                particleContainer.appendChild(particle);
+            }
+        }
+
+        // Post functionality
+        const postBtn = document.getElementById('postBtn');
+        const postText = document.getElementById('postText');
+        const postsFeed = document.getElementById('postsFeed');
+
+        postBtn.addEventListener('click', function() {
+            const content = postText.value.trim();
+            if (content) {
+                const newPost = document.createElement('div');
+                newPost.className = 'post';
+                newPost.innerHTML = `
+                    <div class="post-header">
+                        <div class="post-avatar">US</div>
+                        <div class="post-info">
+                            <div class="post-author">User</div>
+                            <div class="post-time">Just now</div>
+                        </div>
+                    </div>
+                    <div class="post-content">${content}</div>
+                    <div class="post-actions-bar">
+                        <button class="post-action">
+                            <span>❤️</span>
+                            <span>0</span>
+                        </button>
+                        <button class="post-action">
+                            <span>💬</span>
+                            <span>0</span>
+                        </button>
+                        <button class="post-action">
+                            <span>🔄</span>
+                            <span>0</span>
+                        </button>
+                    </div>
+                `;
+                postsFeed.insertBefore(newPost, postsFeed.firstChild);
+                postText.value = '';
+            }
+        });
+
+        // Fetch logged-in user info and update UI
+        function updateUserUI(username) {
+            // Update navbar user
+            document.querySelector('.user-avatar').textContent = username
+                ? username.slice(0, 2).toUpperCase()
+                : 'US';
+            document.querySelector('.user-profile span').textContent = username || 'User';
+
+            // Update post composer avatar and author
+            postBtn.onclick = function() {
+                const content = postText.value.trim();
+                if (content) {
+                    const newPost = document.createElement('div');
+                    newPost.className = 'post';
+                    newPost.innerHTML = `
+                        <div class="post-header">
+                            <div class="post-avatar">${username ? username.slice(0,2).toUpperCase() : 'US'}</div>
+                            <div class="post-info">
+                                <div class="post-author">${username || 'User'}</div>
+                                <div class="post-time">Just now</div>
+                            </div>
+                        </div>
+                        <div class="post-content">${content}</div>
+                        <div class="post-actions-bar">
+                            <button class="post-action">
+                                <span>❤️</span>
+                                <span>0</span>
+                            </button>
+                            <button class="post-action">
+                                <span>💬</span>
+                                <span>0</span>
+                            </button>
+                            <button class="post-action">
+                                <span>🔄</span>
+                                <span>0</span>
+                            </button>
+                        </div>
+                    `;
+                    postsFeed.insertBefore(newPost, postsFeed.firstChild);
+                    postText.value = '';
+                }
+            };
+        }
+
+        // Fetch user from backend
+        fetch('http://localhost:3000/api/user', { credentials: 'include' })
+            .then(res => res.json())
+            .then(data => {
+                if (data.loggedIn && data.username) {
+                    updateUserUI(data.username);
+                } else {
+                    updateUserUI(null);
+                }
+            })
+            .catch(() => updateUserUI(null));
+
+        // Create animated particles on load
+        window.onload = createParticles;
+    </script>
+</body>
+</html>
+

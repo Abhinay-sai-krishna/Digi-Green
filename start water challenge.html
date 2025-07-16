@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Water Challenge - Digi Green</title>
+    <link rel="stylesheet" href="start water challenges.css">
+</head>
+<body>
+    <div class="bg-animation" id="particles"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                💧 Digi Green
+            </div>
+            <ul class="nav-links">
+                <li><a href="Home page.html">Home</a></li>
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="Community..html">Community</a></li>
+                <li><a href="#challenges" class="active">Challenges</a></li>
+            </ul>
+            <div class="user-profile">
+                <div class="user-avatar">US</div>
+                <span>User</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="challenge-header">
+            <h1>💧 Start Water Challenge</h1>
+            <p>Join thousands of eco-warriors in the ultimate water conservation challenge</p>
+            
+            <div class="challenge-stats">
+                <div class="stat-card">
+                    <div class="stat-number">2,450</div>
+                    <div class="stat-label">Active Participants</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">125,000</div>
+                    <div class="stat-label">Liters Saved Today</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">30</div>
+                    <div class="stat-label">Days Challenge</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$500</div>
+                    <div class="stat-label">Prize Pool</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="challenge-grid">
+            <div class="challenge-card">
+                <div class="challenge-content">
+                    <span class="challenge-icon">🏆</span>
+                    <h3 class="challenge-title">30-Day Water Saver Challenge</h3>
+                    <p class="challenge-description">
+                        The ultimate water conservation challenge! Track your daily water usage, implement water-saving techniques, and compete with others to see who can save the most water in 30 days.
+                    </p>
+                    <div class="challenge-details">
+                        <h4>Challenge Goals:</h4>
+                        <ul>
+                            <li>Reduce daily water usage by 20%</li>
+                            <li>Track consumption for 30 days</li>
+                            <li>Implement 5 water-saving techniques</li>
+                            <li>Share progress with community</li>
+                        </ul>
+                    </div>
+                    <button class="challenge-btn" onclick="joinChallenge('30-day')">Join 30-Day Challenge</button>
+                </div>
+            </div>
+
+            <div class="challenge-card">
+                <div class="challenge-content">
+                    <span class="challenge-icon">⚡</span>
+                    <h3 class="challenge-title">Weekly Sprint Challenge</h3>
+                    <p class="challenge-description">
+                        Quick and impactful! A 7-day intensive challenge focused on immediate water conservation habits. Perfect for beginners or those looking for a quick win.
+                    </p>
+                    <div class="challenge-details">
+                        <h4>Challenge Goals:</h4>
+                        <ul>
+                            <li>Complete daily water-saving tasks</li>
+                            <li>Fix all household water leaks</li>
+                            <li>Install water-efficient fixtures</li>
+                            <li>Educate family members</li>
+                        </ul>
+                    </div>
+                    <button class="challenge-btn" onclick="joinChallenge('7-day')">Join Weekly Sprint</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="leaderboard">
+            <h3>🏅 Challenge Leaderboard</h3>
+            <div class="leaderboard-list">
+                <div class="leaderboard-item">
+                    <div class="leaderboard-rank">1</div>
+                    <div class="leaderboard-avatar">AW</div>
+                    <div class="leaderboard-info">
+                        <div class="leaderboard-name">Aqua Warrior</div>
+                        <div class="leaderboard-score">30-Day Challenge • Week 3</div>
+                    </div>
+                    <div class="leaderboard-amount">2,450L</div>
+                </div>
+                <div class="leaderboard-item">
+                    <div class="leaderboard-rank">2</div>
+                    <div class="leaderboard-avatar">ES</div>
+                    <div class="leaderboard-info">
+                        <div class="leaderboard-name">Eco Saver</div>
+                        <div class="leaderboard-score">30-Day Challenge • Week 4</div>
+                    </div>
+                    <div class="leaderboard-amount">2,180L</div>
+                </div>
+                <div class="leaderboard-item">
+                    <div class="leaderboard-rank">3</div>
+                    <div class="leaderboard-avatar">WG</div>
+                    <div class="leaderboard-info">
+                        <div class="leaderboard-name">Water Guardian</div>
+                        <div class="leaderboard-score">Weekly Sprint • Day 7</div>
+                    </div>
+                    <div class="leaderboard-amount">1,890L</div>
+                </div>
+                <div class="leaderboard-item">
+                    <div class="leaderboard-rank">4</div>
+                    <div class="leaderboard-avatar">US</div>
+                    <div class="leaderboard-info">
+                        <div class="leaderboard-name">You</div>
+                        <div class="leaderboard-score">Ready to start your challenge!</div>
+                    </div>
+                    <div class="leaderboard-amount">0L</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tips-section">
+            <h3>💡 Water-Saving Tips</h3>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">🚿</div>
+                    <div class="tip-title">Shorter Showers</div>
+                    <div class="tip-description">
+                        Reduce shower time by 2-3 minutes to save up to 25 gallons per shower. Use a timer to track your progress.
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🔧</div>
+                    <div class="tip-title">Fix Leaks</div>
+                    <div class="tip-description">
+                        A single dripping faucet can waste over 3,000 gallons per year. Check and fix all leaks immediately.
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🌱</div>
+                    <div class="tip-title">Smart Gardening</div>
+                    <div class="tip-description">
+                        Water plants early morning or evening to reduce evaporation. Use drip irrigation and mulch to retain moisture.
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🍽️</div>
+                    <div class="tip-title">Efficient Dishwashing</div>
+                    <div class="tip-description">
+                        Run dishwasher only when full and use eco-mode. Hand-wash dishes in a basin instead of under running water.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tracking-section">
+            <h3 style="text-align: center; font-size: 2.5rem; background: linear-gradient(45deg, #00aeef, #00e6e6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 2rem; font-weight: 700;">📊 Track Your Water Usage</h3>
+            <div class="tracking-form">
+                <div class="form-group">
+                    <label for="activity">Activity</label>
+                    <select id="activity">
+                        <option value="">Select an activity</option>
+                        <option value="shower">Shower</option>
+                        <option value="dishwashing">Dishwashing</option>
+                        <option value="laundry">Laundry</option>
+                        <option value="gardening">Gardening</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="duration">Duration (minutes)</label>
+                    <input type="number" id="duration" placeholder="Enter duration" min="1">
+                </div>
+                <div class="form-group">
+                    <label for="estimated-usage">Estimated Usage (liters)</label>
+                    <input type="number" id="estimated-usage" placeholder="Enter estimated liters" min="1">
+                </div>
+                <div class="form-group">
+                    <label for="water-saved">Water Saved (liters)</label>
+                    <input type="number" id="water-saved" placeholder="Enter water saved" min="0">
+                </div>
+            </div>
+            <button class="track-btn" onclick="trackUsage()">Track Water Usage</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="challengeModal" class="modal">
+        <div class="modal-content">
+            <h3>🎉 Challenge Joined!</h3>
+            <p id="modalMessage">You've successfully joined the challenge! Check your dashboard to track your progress and compete with others.</p>
+            <button class="close-btn" onclick="closeModal()">Get Started</button>
+        </div>
+    </div>
+
+    <script>
+      

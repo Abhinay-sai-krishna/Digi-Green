@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Plastic Use - Digi Green</title>
+    <link rel="stylesheet" href="log plastic use.css">
+</head>
+<body>
+    <div class="bg-animation" id="particles"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                🌍 Digi Green
+            </div>
+            <ul class="nav-links">
+                <li><a href="Home page.html">Home</a></li>
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="Community..html">Community</a></li>
+                <li><a href="#challenges">Challenges</a></li>
+            </ul>
+            <div class="user-profile">
+                <div class="user-avatar">US</div>
+                <span>User</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>♻️ Log Your Plastic Use</h1>
+            <p>Track your daily plastic consumption and get personalized tips to reduce it</p>
+        </div>
+
+        <div class="main-content">
+            <div class="form-section">
+                <h2>Today's Plastic Usage</h2>
+                <form id="plasticForm">
+                    <div class="plastic-items">
+                        <div class="plastic-item" onclick="toggleItem(this, 'bottles')">
+                            <span class="plastic-item-icon">🍼</span>
+                            <div class="plastic-item-name">Plastic Bottles</div>
+                            <div class="plastic-item-count">
+                                <input type="number" id="bottles" min="0" value="0" onclick="event.stopPropagation()">
+                            </div>
+                        </div>
+                        
+                        <div class="plastic-item" onclick="toggleItem(this, 'bags')">
+                            <span class="plastic-item-icon">🛍️</span>
+                            <div class="plastic-item-name">Plastic Bags</div>
+                            <div class="plastic-item-count">
+                                <input type="number" id="bags" min="0" value="0" onclick="event.stopPropagation()">
+                            </div>
+                        </div>
+                        
+                        <div class="plastic-item" onclick="toggleItem(this, 'containers')">
+                            <span class="plastic-item-icon">📦</span>
+                            <div class="plastic-item-name">Food Containers</div>
+                            <div class="plastic-item-count">
+                                <input type="number" id="containers" min="0" value="0" onclick="event.stopPropagation()">
+                            </div>
+                        </div>
+                        
+                        <div class="plastic-item" onclick="toggleItem(this, 'cups')">
+                            <span class="plastic-item-icon">🥤</span>
+                            <div class="plastic-item-name">Disposable Cups</div>
+                            <div class="plastic-item-count">
+                                <input type="number" id="cups" min="0" value="0" onclick="event.stopPropagation()">
+                            </div>
+                        </div>
+                        
+                        <div class="plastic-item" onclick="toggleItem(this, 'straws')">
+                            <span class="plastic-item-icon">🥤</span>
+                            <div class="plastic-item-name">Straws</div>
+                            <div class="plastic-item-count">
+                                <input type="number" id="straws" min="0" value="0" onclick="event.stopPropagation()">
+                            </div>
+                        </div>
+                        
+                        <div class="plastic-item" onclick="toggleItem(this, 'utensils')">
+                            <span class="plastic-item-icon">🍴</span>
+                            <div class="plastic-item-name">Plastic Utensils</div>
+                            <div class="plastic-item-count">
+                                <input type="number" id="utensils" min="0" value="0" onclick="event.stopPropagation()">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notes">Additional Notes (Optional)</label>
+                        <textarea id="notes" placeholder="Any additional plastic items or notes about your usage..." rows="3"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Log My Plastic Usage</button>
+                </form>
+            </div>
+
+            <div class="stats-section">
+                <h2>📊 Your Plastic Stats</h2>
+                <div class="stat-item">
+                    <span class="stat-label">Today's Total:</span>
+                    <span class="stat-value" id="todayTotal">0 items</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">This Week:</span>
+                    <span class="stat-value">47 items</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">This Month:</span>
+                    <span class="stat-value">203 items</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Total Saved:</span>
+                    <span class="stat-value">85 kg</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Reduction Goal:</span>
+                    <span class="stat-value">50% by month end</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tips-section">
+            <h2>💡 Personalized Tips to Reduce Plastic Use</h2>
+            <div class="tip-item">
+                <div class="tip-icon">🍶</div>
+                <div class="tip-content">
+                    <div class="tip-title">Switch to Reusable Water Bottles</div>
+                    <div class="tip-description">You used 5 plastic bottles this week. A reusable bottle could save you 20+ bottles per month!</div>
+                </div>
+            </div>
+            <div class="tip-item">
+                <div class="tip-icon">🛍️</div>
+                <div class="tip-content">
+                    <div class="tip-title">Carry Reusable Shopping Bags</div>
+                    <div class="tip-description">Keep foldable bags in your car or purse. You could eliminate 15-20 plastic bags per week.</div>
+                </div>
+            </div>
+            <div class="tip-item">
+                <div class="tip-icon">🥤</div>
+                <div class="tip-content">
+                    <div class="tip-title">Say No to Straws</div>
+                    <div class="tip-description">Most drinks don't need straws. If you must use one, try reusable metal or bamboo alternatives.</div>
+                </div>
+            </div>
+            <div class="tip-item">
+                <div class="tip-icon">🍱</div>
+                <div class="tip-content">
+                    <div class="tip-title">Use Glass Food Containers</div>
+                    <div class="tip-description">Replace disposable containers with glass ones. They're healthier and can be reused indefinitely.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        function toggleItem(element, inputId) {
+            element.classList.toggle('selected');
+            const input = document.getElementById(inputId);
+            if (element.classList.contains('selected') && input.value === '0') {
+                input.value = '1';
+            }
+            updateTotal();
+        }
+
+        function updateTotal() {
+            const inputs = ['bottles', 'bags', 'containers', 'cups', 'straws', 'utensils'];
+            let total = 0;
+            inputs.forEach(id => {
+                const value = parseInt(document.getElementById(id).value) || 0;
+                total += value;
+            });
+            document.getElementById('todayTotal').textContent = total + ' items';
+        }
+
+        // Add event listeners to all number inputs
+        document.querySelectorAll('input[type="number"]').forEach(input => {
+            input.addEventListener('input', updateTotal);
+        });
+
+        document.getElementById('plasticForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            alert('✅ Your plastic usage has been logged successfully! Keep tracking to see your progress.');
+            
+            // Reset form
+            this.reset();
+            document.querySelectorAll('.plastic-item').forEach(item => {
+                item.classList.remove('selected');
+            });
+            updateTotal();
+        });
+
+        // Initialize particles
+        createParticles();
+    </script>
+</body>
+</html>
